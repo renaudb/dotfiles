@@ -11,6 +11,9 @@
 ;; Show column number
 (column-number-mode t)
 
+;; Save session on exit
+(desktop-save-mode t)
+
 ;; -----------------------------------------------
 ;; INITIALIZE USER DEFINED FUNCTIONS
 ;; -----------------------------------------------
