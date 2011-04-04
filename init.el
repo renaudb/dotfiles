@@ -64,7 +64,7 @@
 
 ;; Highlight trailing characters
 (setq whitespace-line-column 80
-      whitespace-style '(tabs trailing lines-tail))
+      whitespace-style '(face tabs trailing lines-tail))
 
 ;; Set invalid whitespace colors
 (set-face-attribute 'whitespace-line nil
