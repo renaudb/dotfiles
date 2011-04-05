@@ -21,7 +21,6 @@
 ;; Compile shortcut
 (global-set-key (kbd "C-c c") 'recompile)
 
-
 ;; -----------------------------------------------
 ;; INITIALIZE USER DEFINED FUNCTIONS
 ;; -----------------------------------------------
