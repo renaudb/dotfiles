@@ -15,6 +15,14 @@
 (desktop-save-mode t)
 
 ;; -----------------------------------------------
+;; INITIALIZE USER DEFINED SHORTCUTS
+;; -----------------------------------------------
+
+;; Compile shortcut
+(global-set-key (kbd "C-c c") 'recompile)
+
+
+;; -----------------------------------------------
 ;; INITIALIZE USER DEFINED FUNCTIONS
 ;; -----------------------------------------------
 
@@ -67,7 +75,7 @@
 
 ;; Highlight trailing characters
 (setq whitespace-line-column 80
-      whitespace-style '(face tabs trailing lines-tail))
+      whitespace-style '(face trailing lines-tail))
 
 ;; Set invalid whitespace colors
 (set-face-attribute 'whitespace-line nil
