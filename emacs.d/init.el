@@ -8,11 +8,37 @@
 ;; No Startup Message
 (setq inhibit-startup-message t)
 
+;; -----------------------------------------------
+;; SETUP UP BUILT IN MODES
+;; -----------------------------------------------
+
+;; Disable the menubar and toolbar
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+
 ;; Show column number
 (column-number-mode t)
 
 ;; Save session on exit
 (desktop-save-mode t)
+
+;; Show matching parenthesis
+(show-paren-mode t)
+
+;; Set C/C++ indent to 2 spaces
+(setq c-basic-offset 2)
+
+;; Reload etags file on change
+(setq tags-revert-without-query t)
+
+;; Set backup file folder
+(setq backup-directory-alist '(("." . "~/.emacs.d/backup"))
+      backup-by-copying t    ; Don't delink hardlinks
+      version-control t      ; Use version numbers on backups
+      delete-old-versions t  ; Automatically delete excess backups
+      kept-new-versions 20   ; how many of the newest versions to keep
+      kept-old-versions 5    ; and how many of the old
+      )
 
 ;; -----------------------------------------------
 ;; INITIALIZE USER DEFINED SHORTCUTS
@@ -20,6 +46,9 @@
 
 ;; Compile shortcut
 (global-set-key (kbd "C-c c") 'recompile)
+
+;; Buffer menu shortcut
+(global-set-key (kbd "<C-tab>") 'buffer-menu)
 
 ;; -----------------------------------------------
 ;; INITIALIZE USER DEFINED FUNCTIONS
@@ -57,16 +86,22 @@
 
 	;; Language modes
 	js2-mode
+	lua-mode
 	php-mode
 	python-mode
 	ruby-mode
 
 	;; Color theme modes
 	color-theme
-	color-theme-tango
+	color-theme-tango-2
 	))
-
 (el-get)
+
+;; Set the color theme.
+(color-theme-tango)
+
+;; Autoload octave mode on MATLAB files.
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
 
 ;; -----------------------------------------------
 ;; INITIALIZE MODES AND OTHER OPTIONS
