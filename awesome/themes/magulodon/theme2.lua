@@ -29,21 +29,37 @@ theme.taglist_font  = "ClearlyU 11"
 --theme.taglist_font  = "Times 13"
 --theme.taglist_bg_focus = "#252525"
 
+--[[
 theme.bg_normal     = "#2B2B2B"
 theme.bg_focus      = "#2b2b2b"
 theme.bg_urgent     = "#404040"
 theme.bg_minimize   = "#000000"
+--]]
 
+theme.bg_normal     = "#222222"
+theme.bg_focus      = "#222222"
+theme.bg_urgent     = "#404040"
+theme.bg_minimize   = "#000000"
+
+--[[
 theme.fg_normal     = "#5FA496"
 --theme.fg_focus      = "#8b8fff"
 theme.fg_focus      = "#9EA1FF"
 theme.fg_urgent     = "#5fa496"
 theme.fg_minimize   = "#000000"
 theme.bar           = "#6568bf"
+--]]
+
+theme.fg_normal     = "#FFFFFF"
+--theme.fg_focus      = "#8b8fff"
+theme.fg_focus      = "#3465A4"
+theme.fg_urgent     = "#5fa496"
+theme.fg_minimize   = "#000000"
+theme.bar           = "#6568bf"
 
 theme.border_width  = "1"
-theme.border_normal = "#30314F"
-theme.border_focus  = "#3F7B6F"
+theme.border_normal = "#C8C8C8"
+theme.border_focus  = "#3465A4"
 theme.border_marked = "#000000"
 
 
@@ -160,4 +176,3 @@ theme.widget_next      = themeicons .. "/next.png"
 
 return theme
  --vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80
-

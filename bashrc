@@ -25,6 +25,9 @@ alias ls='ls --color=auto'
 # Check if on the Interwebs
 alias p8='ping -n 8.8.8.8 -c 4'
 
+# Pacman utility functions
+alias pacsize='expac -H M "%m %n" | sort -n'
+
 # Search files for a word
 function srch() {
     find "$1" -type f | xargs grep "$2";
@@ -36,4 +39,3 @@ function srch() {
 
 # Set default editor
 export EDITOR='emacs'
-

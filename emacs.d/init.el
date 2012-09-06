@@ -90,6 +90,7 @@
 	php-mode
 	python-mode
 	ruby-mode
+	scala-mode
 
 	;; Color theme modes
 	color-theme
