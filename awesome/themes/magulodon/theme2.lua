@@ -2,8 +2,7 @@
 -- Default awesome theme --
 ---------------------------
 
---{{{ Main
-require("awful.util")
+local awful = require("awful")
 
 theme = {}
 
@@ -11,14 +10,14 @@ home          = os.getenv("HOME")
 config        = awful.util.getdir("config")
 shared        = "/usr/share/awesome"
 if not awful.util.file_readable(shared .. "/icons/awesome16.png") then
-    shared    = "/usr/share/local/awesome"
+   shared    = "/usr/share/local/awesome"
 end
 sharedicons   = shared .. "/icons"
 sharedthemes  = shared .. "/themes"
 themes        = config .. "/themes"
 themename     = "/magulodon"
 if not awful.util.file_readable(themes .. themename .. "/theme2.lua") then
-        themes = sharedthemes
+   themes = sharedthemes
 end
 themedir      = themes .. themename
 themeicons    = themedir .. "/icons2"
@@ -29,39 +28,21 @@ theme.taglist_font  = "ClearlyU 11"
 --theme.taglist_font  = "Times 13"
 --theme.taglist_bg_focus = "#252525"
 
---[[
-theme.bg_normal     = "#2B2B2B"
-theme.bg_focus      = "#2b2b2b"
-theme.bg_urgent     = "#404040"
-theme.bg_minimize   = "#000000"
---]]
-
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#222222"
 theme.bg_urgent     = "#404040"
 theme.bg_minimize   = "#000000"
 
---[[
-theme.fg_normal     = "#5FA496"
---theme.fg_focus      = "#8b8fff"
-theme.fg_focus      = "#9EA1FF"
-theme.fg_urgent     = "#5fa496"
-theme.fg_minimize   = "#000000"
-theme.bar           = "#6568bf"
---]]
-
 theme.fg_normal     = "#FFFFFF"
---theme.fg_focus      = "#8b8fff"
 theme.fg_focus      = "#3465A4"
 theme.fg_urgent     = "#5fa496"
 theme.fg_minimize   = "#000000"
 theme.bar           = "#6568bf"
 
-theme.border_width  = "1"
+theme.border_width  = 1
 theme.border_normal = "#C8C8C8"
 theme.border_focus  = "#3465A4"
 theme.border_marked = "#000000"
-
 
 -- There are other variable sets
 -- overriding the default one when
@@ -84,8 +65,8 @@ theme.tasklist_floating_icon = themeicons .. "/layouts/tasklist/floating.png"
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = shared .. "/themes/default/submenu.png"
-theme.menu_height = "15"
-theme.menu_width  = "100"
+theme.menu_height = 15
+theme.menu_width  = 100
 
 -- You can add as many variables as
 -- you wish and access them by using
@@ -117,7 +98,7 @@ theme.titlebar_maximized_button_normal_active = shared .. "/themes/default/title
 theme.titlebar_maximized_button_focus_active  = shared .. "/themes/default/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "awsetbg /home/renaudb/Documents/Images/wallpaper.jpg" }
+theme.wallpaper_cmd = { "awsetbg " .. home .. "/Pictures/wallpaper.jpg" }
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themeicons .. "/layouts/fairh.png"
@@ -167,7 +148,6 @@ theme.widget_fs       = themeicons .. "/fs_01.png"
 theme.widget_fs2      = themeicons .. "/disk.png"
 theme.widget_up       = themeicons .. "/net_up_02.png"
 theme.widget_down     = themeicons .. "/net_down_02.png"
-
 
 theme.widget_play      = themeicons .. "/play.png"
 theme.widget_stop      = themeicons .. "/stop.png"
