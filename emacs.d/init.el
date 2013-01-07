@@ -91,6 +91,7 @@
 	python-mode
 	ruby-mode
 	scala-mode
+	R-mode
 
 	;; Color theme modes
 	color-theme
