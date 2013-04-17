@@ -3,7 +3,7 @@
 ;; -----------------------------------------------
 
 ;; Set Font Size
-(set-face-attribute 'default nil :height 90)
+(set-face-attribute 'default nil :height 110)
 
 ;; No Startup Message
 (setq inhibit-startup-message t)
@@ -93,6 +93,9 @@
 	scala-mode
 	R-mode
 
+	;; Default to Google style for C/C++
+	google-c-style
+
 	;; Color theme modes
 	color-theme
 	color-theme-tango-2
@@ -100,7 +103,10 @@
 (el-get)
 
 ;; Set the color theme.
-(color-theme-tango)
+(color-theme-solarized-dark)
+
+;; Set C-mode to Google.
+(add-hook 'c-mode-common-hook 'google-set-c-style)
 
 ;; Autoload octave mode on MATLAB files.
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
