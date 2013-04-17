@@ -1,0 +1,5 @@
+# Emacs cache #
+###############
+emacs.d/auto-save-list/
+emacs.d/backup/
+emacs.d/el-get/
