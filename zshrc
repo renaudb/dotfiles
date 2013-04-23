@@ -32,10 +32,13 @@ alias mv="mv -i"
 alias rm="rm -I"
 
 # Set emacs aliases.
-alias e=emacsclient -t
-alias ec=emacsclient -c
-alias vim=emacsclient -t
-alias vi=emacsclient -t
+alias e="emacsclient -t"
+alias ec="emacsclient -c"
+alias vim="emacsclient -t"
+alias vi="emacsclient -t"
+
+# Set feh alias.
+alias feh="feh -Z --force-aliasing"
 
 # Add paths to PATH.
 PATH="$HOME/bin:/usr/local/MATLAB/R2011a/bin:$PATH"
