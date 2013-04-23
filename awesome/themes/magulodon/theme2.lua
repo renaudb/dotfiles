@@ -28,15 +28,15 @@ theme.taglist_font  = "ClearlyU 11"
 --theme.taglist_font  = "Times 13"
 --theme.taglist_bg_focus = "#252525"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#222222"
+theme.bg_normal     = "#002b36" -- "#222222"
+theme.bg_focus      = "#002b36" -- "#222222"
 theme.bg_urgent     = "#404040"
-theme.bg_minimize   = "#000000"
+theme.bg_minimize   = "#002b36"-- "#000000"
 
-theme.fg_normal     = "#FFFFFF"
-theme.fg_focus      = "#3465A4"
+theme.fg_normal     = "#93a1a1" -- "#FFFFFF"
+theme.fg_focus      = "#268bd2" -- "#3465A4"
 theme.fg_urgent     = "#5fa496"
-theme.fg_minimize   = "#000000"
+theme.fg_minimize   = "#586e75" -- "#000000"
 theme.bar           = "#6568bf"
 
 theme.border_width  = 1

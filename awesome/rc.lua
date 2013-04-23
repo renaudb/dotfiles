@@ -50,7 +50,7 @@ end
 -- WM
 --------------------------------------------------------------------------------
 -- Start composite manager
-awful.util.spawn_with_shell("compton -cCGb -o 0.38 -r 3.2 -m 0.88 -t 0.02 -l 0.02")
+--awful.util.spawn_with_shell("compton -cCGb -o 0.38 -r 3.2 -m 0.88 -t 0.02 -l 0.02")
 
 --------------------------------------------------------------------------------
 -- VARIABLES
@@ -69,13 +69,9 @@ modkey = "Mod4"
 --------------------------------------------------------------------------------
 local layouts =
    {
-   awful.layout.suit.floating,
    awful.layout.suit.tile,
-   awful.layout.suit.tile.left,
-   awful.layout.suit.tile.bottom,
-   awful.layout.suit.tile.top,
    awful.layout.suit.fair,
-   awful.layout.suit.fair.horizontal,
+   awful.layout.suit.floating,
    awful.layout.suit.max.fullscreen,
    }
 
@@ -84,7 +80,7 @@ local layouts =
 --------------------------------------------------------------------------------
 tags = {}
 for s = 1, screen.count() do
-    tags[s] = awful.tag({ "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }, s, layouts[2])
+    tags[s] = awful.tag({ "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }, s, layouts[1])
 end
 
 --------------------------------------------------------------------------------
@@ -238,7 +234,8 @@ awful.rules.rules = {
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      keys = clientkeys,
-                     buttons = clientbuttons } },
+                     buttons = clientbuttons,
+		     size_hints_honor = false } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
